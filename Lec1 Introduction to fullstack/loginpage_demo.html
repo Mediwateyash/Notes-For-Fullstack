@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Process Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        input {
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            border-color: #2575fc;
+            outline: none;
+        }
+        
+        button {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+        }
+        
+        .process-flow {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .flow-title {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 15px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+        
+        .step.active {
+            opacity: 1;
+            border-left: 5px solid #2575fc;
+        }
+        
+        .step.completed {
+            opacity: 1;
+            border-left: 5px solid #4caf50;
+        }
+        
+        .status-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        .completed .status-icon {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .active .status-icon {
+            background-color: #2575fc;
+            color: white;
+        }
+        
+        .step-text {
+            flex: 1;
+            font-size: 16px;
+        }
+        
+        .time {
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .database-demo {
+            margin-top: 20px;
+            background-color: #2c3e50;
+            border-radius: 8px;
+            overflow: hidden;
+            color: white;
+        }
+        
+        .db-header {
+            background-color: #1a252f;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .db-content {
+            padding: 15px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 120px;
+            overflow-y: auto;
+            max-height: 120px;
+        }
+        
+        .db-response {
+            color: #3498db;
+        }
+        
+        .db-success {
+            color: #2ecc71;
+        }
+        
+        .db-error {
+            color: #e74c3c;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .red-dot {
+            background-color: #ff5f56;
+        }
+        
+        .yellow-dot {
+            background-color: #ffbd2e;
+        }
+        
+        .green-dot {
+            background-color: #27c93f;
+        }
+        
+        footer {
+            background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .company {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .disclaimer {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .footer-content {
+                font-size: 12px;
+            }
+            
+            .disclaimer {
+                font-size: 11px;
+            }
+        }
+        
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Login Process Demo</h1>
+            <div class="subtitle">A visual demonstration of the full-stack login flow</div>
+        </header>
+        
+        <div class="content">
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" value="student2023">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" value="••••••••">
+                </div>
+                
+                <button id="login-btn">Login</button>
+            </div>
+            
+            <div class="process-flow">
+                <h3 class="flow-title">Login Process Steps</h3>
+                
+                <div class="step" id="step1">
+                    <div class="status-icon">1</div>
+                    <div class="step-text">Form Submitted</div>
+                    <div class="time">0ms</div>
+                </div>
+                
+                <div class="step" id="step2">
+                    <div class="status-icon">2</div>
+                    <div class="step-text">Frontend Validation</div>
+                    <div class="time">0ms</div>
+                </div>
+                
+                <div class="step" id="step3">
+                    <div class="status-icon">3</div>
+                    <div class="step-text">Sending to Server</div>
+                    <div class="time">0ms</div>
+                </div>
+                
+                <div class="step" id="step4">
+                    <div class="status-icon">4</div>
+                    <div class="step-text">Backend Validation</div>
+                    <div class="time">0ms</div>
+                </div>
+                
+                <div class="step" id="step5">
+                    <div class="status-icon">5</div>
+                    <div class="step-text">Database Query</div>
+                    <div class="time">0ms</div>
+                </div>
+                
+                <div class="step" id="step6">
+                    <div class="status-icon">6</div>
+                    <div class="step-text">Login Successful</div>
+                    <div class="time">0ms</div>
+                </div>
+            </div>
+            
+            <div class="database-demo">
+                <div class="db-header">
+                    <div class="dot red-dot"></div>
+                    <div class="dot yellow-dot"></div>
+                    <div class="dot green-dot"></div>
+                    <span>MongoDB Shell</span>
+                </div>
+                <div class="db-content" id="db-output">
+                    <span class="db-response">// Ready for login attempt...</span>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="company">Diwate Yash - <a href="www.interskillsolutions.com">InterSkill Solution</a> <style>a:{color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; cursor: pointer; transition: color 0.3s ease; } a:hover { color: #fcfcfc;  }</style></div>
+                <div>Full-Stack Development Teaching Demo</div>
+                <div class="disclaimer">
+                    Disclaimer: This is a simulated project for educational purposes only. No actual data is being sent to any server.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('login-btn');
+            const steps = document.querySelectorAll('.step');
+            const dbOutput = document.getElementById('db-output');
+            let startTime;
+            
+            loginBtn.addEventListener('click', function() {
+                // Set start time
+                startTime = Date.now();
+                
+                // Reset UI
+                steps.forEach(step => {
+                    step.className = 'step';
+                    step.querySelector('.time').textContent = '0ms';
+                });
+                dbOutput.innerHTML = '<span class="db-response">// Ready for login attempt...</span>';
+                
+                // Get form values
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // Start the process
+                simulateLoginProcess(username, password);
+            });
+            
+            function simulateLoginProcess(username, password) {
+                // Step 1: Form Submitted
+                updateStep(1, 0);
+                dbOutput.innerHTML = '<span class="db-response">// Form submitted with username: ' + username + '</span>';
+                
+                // Add 3-second delay here to simulate network/processing time
+                setTimeout(() => {
+                    // Step 2: Frontend Validation (after 3000ms delay)
+                    updateStep(2, 3000);
+                    
+                    if (username.length < 3) {
+                        dbOutput.innerHTML = '<span class="db-error">// Error: Username must be at least 3 characters</span>';
+                        return;
+                    }
+                    
+                    if (password.length < 6) {
+                        dbOutput.innerHTML = '<span class="db-error">// Error: Password must be at least 6 characters</span>';
+                        return;
+                    }
+                    
+                    dbOutput.innerHTML = '<span class="db-success">// Frontend validation passed</span>';
+                    
+                    // Step 3: Sending to Server (after 500ms)
+                    setTimeout(() => {
+                        updateStep(3, 500);
+                        dbOutput.innerHTML = '<span class="db-response">// Sending request to server... (POST /api/login)</span>';
+                        
+                        // Step 4: Backend Validation (after 600ms)
+                        setTimeout(() => {
+                            updateStep(4, 600);
+                            dbOutput.innerHTML = '<span class="db-response">// Validating credentials on server...</span>';
+                            
+                            // Step 5: Database Query (after 700ms)
+                            setTimeout(() => {
+                                updateStep(5, 700);
+                                dbOutput.innerHTML = '<span class="db-response">// Querying database: db.users.findOne({ username: "' + username + '" })</span>';
+                                
+                                // Simulate database response (after 900ms)
+                                setTimeout(() => {
+                                    dbOutput.innerHTML = `
+                                        <span class="db-response">// Database response:</span><br>
+                                        <span class="db-success">{</span><br>
+                                        <span class="db-success">  _id: ObjectId("64a3b5c8e12f4e5d4c8b456a"),</span><br>
+                                        <span class="db-success">  username: "${username}",</span><br>
+                                        <span class="db-success">  password: "$2b$10$r2bZ8hTKq9qyL1j2KQmZZ.N7E2QYcW6oZ8J8bGtV6nXrFvH8sL6W",</span><br>
+                                        <span class="db-success">  email: "${username}@example.com",</span><br>
+                                        <span class="db-success">  createdAt: 2023-07-03T10:30:00.000Z</span><br>
+                                        <span class="db-success">}</span>
+                                    `;
+                                    
+                                    // Step 6: Login Successful (after 600ms)
+                                    setTimeout(() => {
+                                        updateStep(6, 600);
+                                        dbOutput.innerHTML += '<br><span class="db-success">// Login successful! Redirecting to dashboard...</span>';
+                                    }, 600);
+                                    
+                                }, 900);
+                                
+                            }, 700);
+                            
+                        }, 600);
+                        
+                    }, 500);
+                    
+                }, 3000); // This is the 3-second delay
+            }
+            
+            function updateStep(stepNumber, delay) {
+                setTimeout(() => {
+                    // Calculate elapsed time
+                    const elapsed = Date.now() - startTime;
+                    
+                    // Update the step
+                    const step = document.getElementById('step' + stepNumber);
+                    step.classList.add('active');
+                    step.querySelector('.time').textContent = elapsed + 'ms';
+                    
+                    // Mark previous steps as completed
+                    for (let i = 1; i < stepNumber; i++) {
+                        const prevStep = document.getElementById('step' + i);
+                        prevStep.classList.remove('active');
+                        prevStep.classList.add('completed');
+                    }
+                }, delay);
+            }
+        });
+    </script>
+</body>
+</html>
