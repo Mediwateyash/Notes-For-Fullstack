@@ -1,0 +1,108 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1) All .box have light gray background + padding */
+.box {
+  background: lightgray;
+  padding: 15px;
+}
+
+/* 2) All .title elements become blue */
+.title {
+  color: blue;
+}
+
+/* 3) Only the .title inside #box becomes red */
+#box .title {
+  color: red;
+}
+
+/* 4) Try this: div .title {color: green;} placed AFTER #box .title */
+div .title {
+  color: green;
+}
+/* Explanation: ❌ It does NOT override #box .title
+   because #box .title has a higher specificity (id + class vs element + class).
+   Even if div .title is written later, the more specific selector wins.
+*/
+
+/* 6) Make .btn + .primary modifier */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ddd; /* default button style */
+}
+
+.btn.primary {
+  background: blue;
+  color: white;
+}
+
+body {
+  background-color: lightgray;
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+h1{
+  color: rgb(186, 57, 57,0.1);
+}
+/* .test2{
+  background-color: rgb(112, 59, 59);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+h2{
+  color: rgba(42, 249, 23, 0.1);
+}
+
+p {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+   color: rgb(0, 0, 0);
+  text-decoration: underline ;
+  text-transform: capitalize;
+  text-align: left;
+  letter-spacing: 2px;
+  word-spacing: 20px;
+  line-height: 1.5;
+  text-shadow: 20px 2px 50px red;
+  font-style: italic;
+} */
+
+.test{
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  
+}
+
+
+h1{
+  color: rgb(186, 57, 57,0.1);
+}
+.boxmodel{
+  background-color: sandybrown;
+  height: 200px;
+  width: 200px;
+  border: 2px solid rgb(222, 8, 8);
+ margin: 50 px 20px 30px 40px;
+ padding: 10px 20px 30px 40px;
+}
+
+.box2{
+  background-color: rgb(0, 0, 0);
+  height: 100px;
+  width: 100px;
+  margin: 30px 20px;
+  border-radius: 50px;
+}

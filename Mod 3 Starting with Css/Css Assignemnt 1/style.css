@@ -1,0 +1,207 @@
+/* ============================
+   A. Selectors & Colors
+   ============================ */
+
+/* Universal selector - resets default margins & paddings of all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* good practice */
+}
+
+/* Element selector - makes all paragraphs gray */
+p {
+  color: gray;
+}
+
+/* Class selector - .site-title (class name) → turns text blue */
+.site-title {
+  color: blue;
+}
+
+/* ID selector - #footer (id name) → black background with white text */
+#footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Class selector - .btn (button style) → green background, white text */
+.btn {
+  background: green;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;   /* rounded corners */
+  border: none;
+  cursor: pointer;
+}
+
+  
+/* ============================
+   B. Text Properties
+   ============================ */
+
+/* Center align site title */
+.site-title {
+  text-align: center;
+}
+
+/* .name → bold, uppercase, bigger font */
+.name {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+/* Remove underline from links */
+a {
+  text-decoration: none;
+  color: inherit; /* keeps text color same as parent */
+}
+
+/* .bio → capitalize each word */
+.bio {
+  text-transform: capitalize;
+}
+
+/* Change font-family for body */
+body {
+  font-family: Arial, sans-serif;
+}
+
+
+/* ============================
+   C. Units & Sizing
+   ============================ */
+
+/* .profile-card fixed width and centered */
+.profile-card {
+  width: 300px;
+  margin: 20px auto; /* auto centers horizontally */
+  text-align: center;
+}
+
+/* Profile image takes full card width */
+.profile-img {
+  width: 100%;
+}
+
+/* Heading and paragraph sizing */
+h1, h2, h3 {
+  font-size: 2rem; /* scales with root font size */
+}
+p {
+  margin-bottom: 1em; /* spacing relative to font size */
+}
+
+
+/* ============================
+   D. Box Model
+   ============================ */
+
+/* Add padding and border to card */
+.profile-card {
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* Margin between project boxes */
+.project {
+  margin: 20px;
+}
+
+
+/* ============================
+   E. Display Property
+   ============================ */
+
+/* Make nav items horizontal */
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Make .btn inline-block (so we can set width/height) */
+.btn {
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+}
+
+/* Hide bio temporarily */
+.bio {
+  display: none;
+}
+
+/* Later → show it back (remove or overwrite this rule) */
+.bio.show {
+  display: block;
+}
+
+
+/* ============================
+   F. Backgrounds
+   ============================ */
+
+/* Background color for body */
+body {
+  background-color: #f5f5f5;
+}
+
+/* Gradient background for card */
+.profile-card {
+  background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+/* Footer background image */
+#footer {
+  background: url('footer-bg.jpg') no-repeat center;
+  background-size: cover;
+  color: white;
+}
+
+
+/* ============================
+   G. Flexbox
+   ============================ */
+
+/* Project list layout */
+.project-list {
+  display: flex;
+  gap: 15px; /* spacing */
+  justify-content: space-around; /* spread evenly */
+  align-items: center; /* vertical alignment */
+}
+
+
+/* ============================
+   H. Bonus Challenges
+   ============================ */
+
+/* Hover effect for buttons */
+.btn:hover {
+  background: darkgreen; /* darker shade */
+}
+
+/* Hover effect for nav links */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Make profile image circular */
+.profile-img {
+  border-radius: 50%;
+}
+
+/* Navbar above all with z-index */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  z-index: 1000;
+}
