@@ -1,4 +1,154 @@
+/*1. Use the universal selector * to reset margin and padding to 0. */
 *{
     margin: 0px;
     padding: 0px;
+}
+/*  2. Use an element selector to make all <p> tags gray. */
+p{
+    background-color: grey;
+}
+/*  3. Use a class selector .site-tle → change text to blue. */
+.site-tle{
+    color: blue;
+    text-align: center;
+}
+/* 4. Use an ID selector #footer → background black, text white.*/
+#footer{
+    background-color: black;
+    color: white;
+}
+/* 5. Style .btn with background green, text white, rounded corners.*/
+.btn{
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+/* B.Text Properties */
+/*  2. Make .name bold, uppercase, and font-size: 24px. */
+.name{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;:
+}
+/* 3. Use text-decoration: none; to remove underline from . */
+a{
+    text-decoration: none;
+}
+/* 4. Use text-transform: capitalize; for .bio. */
+.bio{
+    text-transform: capitalize;
+}
+/* 5. Change font-family for body: Arial, sans-serif. */
+body{
+    font-family: Arial, sans-serif;
+}
+/* C. Units & Sizing */
+/* 1. Give .profile-card a fixed width of 300px and center it using margin: auto. */
+.profile-card{
+    width: 300px;
+    margin: auto;
+}
+/* 2. Set .profile-img width to 100% of the card. */
+.profile-img{
+    width: 100%;
+}
+/* 3. Use rem units for heading sizes and em units for paragraph spacing.*/
+h2{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1em;
+}
+/* D. Box Model*/
+/* 1. Add padding: 20px to .profile-card. */
+/* 2. Add a border 2px solid #ddd around .profile-card. */
+.profile-card{
+    padding: 20px;
+    border: 2px solid #ddd;
+}
+/* 3. Add margin: 20px between project boxes (.project) */
+.project{
+    margin: 20px;
+}
+/* E. Display Property */
+/* 1. Change the nav menu (nav ul li) from ver cal list to horizontal using display: inline-block;. */
+nav ul li{
+    display: inline-block;
+}
+/* 2. Make .btn an inline-block so width & height can be set. */
+.btn{
+    display: inline-block;
+}
+/* 3. Hide the .bio temporarily with display: none; and then show it back.*/
+.bio{
+    display: none;
+}
+/* F. Backgrounds*/
+/* 1. Add a background color to the body.*/
+body{
+    background-color: powderblue;
+}
+/* 2. Add a gradient background for .profile-card.*/
+.profile-card{
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+/* G. Flexbox*/
+/* 1. In .project-list, use display: flex;.*/
+.projrct-list{
+    display: flex;
+}
+/* 2. Use gap: 15px; to add spacing between projects.*/
+.project{
+    gap: 15px;
+}
+/* 3. Use justify-content: space-around; to spread projects evenly. */
+.project-list{
+    justify-content: space-around;
+}
+/* 4. Use align-items: center; if you add height to .project-list.*/
+.project-list{
+    align-items: center;
+}
+/* H. Bonus Challenges*/
+/* 1. Add hover effect on .btn: background darkens.*/
+.btn:hover{
+    background-color: darkgreen;
+}
+/* 2. Add hover effect on nav : underline on hover.*/
+nav a:hover{
+    text-decoration: underline;
+}
+/* 3. Make .profile-img circular using border-radius: 50%;.*/
+.profile-img{
+    border-radius: 50%;
+}
+/* 4. Use z-index to place the navbar above everything.*/
+nav{
+    z-index: 1;
+}
+/* 5. Make the navbar fixed (position: fixed; top: 0; width: 100%;).*/
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+
+}
+.header{
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.main-header{
+    height: 30px;
 }
