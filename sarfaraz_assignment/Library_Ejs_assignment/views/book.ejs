@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<%- include("partials/header") %>
+<!-- ============================
+       ⭐ Recommended Books
+============================= -->
+<section class="recommended-section">
+  <h2 class="section-title">Recommended Books</h2>
+
+  <div class="recommended-grid">
+
+    <% recommendedBooks.forEach(book => { %>
+     <!-- <% recommendedBooks.forEach(r => { %> -->
+
+      <div class="rec-card">
+        <img src="<%= book.image %>" alt="<%= book.name %>" />
+
+        <div class="rec-info">
+          <h4><%= book.name %></h4>
+          <p class="author"><%= book.author %></p>
+
+          <!-- ⭐ Rating Stars -->
+          <div class="rating">
+            <% for(let i = 1; i <= 5; i++) { %>
+              <% if (i <= book.rating) { %>
+                <span class="star filled">★</span>
+              <% } else { %>
+                <span class="star">☆</span>
+              <% } %>
+            <% } %>
+          </div>
+
+          <a href="/book/<%= book.id %>" class="rec-btn">View Details</a>
+        </div>
+      </div>
+    <% }) %>
+
+  </div>
+</section>
+
+
+<a href="/" class="back-btn">← Back</a>
+
+<div class="book-detail-box">
+
+  <img src="/<%= book.image %>" class="detail-img">
+
+  <div class="detail-info">
+    <h1><%= book.name %></h1>
+
+    <p><strong>Author:</strong> <%= book.author %></p>
+    <p><strong>Genre:</strong> <%= book.genre %></p>
+    <p><strong>Status:</strong> <%= book.status %></p>
+
+    <p><strong>Description:</strong> <%= book.description %></p>
+  </div>
+</div>
+
+<div class="rating-box">
+  <% 
+    const fullStars = Math.floor(book.rating);
+    const halfStar = book.rating % 1 >= 0.5;
+  %>
+
+  <% for (let i = 0; i < fullStars; i++) { %>
+    <span class="star full">★</span>
+  <% } %>
+
+  <% if (halfStar) { %>
+    <span class="star half">★</span>
+  <% } %>
+
+  <% for (let i = fullStars + (halfStar ? 1 : 0); i < 5; i++) { %>
+    <span class="star empty">★</span>
+  <% } %>
+
+  <span class="rating-number">(<%= book.rating %>)</span>
+</div>
+
+<h2 class="recommended-title">Recommended Books</h2>
+
+<div class="recommended-grid">
+  <% recommended.forEach(r => { %>
+    <div class="rec-card">
+      <img src="/<%= r.image %>">
+      <h3><%= r.name %></h3>
+      <a href="/book/<%= r.id %>" class="btn-sm">View</a>
+    </div>
+  <% }) %>
+</div>
+
+<%- include("partials/footer") %>
+
+</body>
+</html>

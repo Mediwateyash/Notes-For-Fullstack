@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": "Thriller",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img1.jpg",
+    "description": "A psychological thriller about a woman who stops speaking after murdering her husband."
+  },
+  {
+    "id": 2,
+    "name": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Self-help",
+    "status": "Issued",
+    "rating": 4.5,
+    "image": "images/img2.jpg",
+    "description": "A practical guide to building good habits and breaking bad ones."
+  },
+  {
+    "id": 3,
+    "name": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img3.jpg",
+    "description": "Harry Potter discovers he is a wizard and enters a magical world."
+  },
+  {
+    "id": 4,
+    "name": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "status": "Issued",
+    "rating": 4.5,
+    "image": "images/img4.jpg",
+    "description": "A shepherd boy embarks on a journey to find his personal legend."
+  },
+  {
+    "id": 5,
+    "name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Adventure",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img5.jpg",
+    "description": "Bilbo Baggins joins a quest to reclaim the dwarves' treasure."
+  },
+  {
+    "id": 6,
+    "name": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "genre": "Finance",
+    "status": "Issued",
+    "rating": 4.5,
+    "image": "images/img6.jpg",
+    "description": "Financial lessons about assets, liabilities, and financial freedom."
+  },
+  {
+    "id": 7,
+    "name": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "genre": "Finance",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img7.jpg",
+    "description": "Stories about money, greed, and the behavior behind financial decisions."
+  },
+  {
+    "id": 8,
+    "name": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "status": "Issued",
+    "rating": 4.5,
+    "image": "images/img8.jpg",
+    "description": "A dystopian world dominated by surveillance and totalitarianism."
+  },
+  {
+    "id": 9,
+    "name": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "genre": "Self-help",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img9.jpg",
+    "description": "A counterintuitive guide to living a good life."
+  },
+  {
+    "id": 10,
+    "name": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "genre": "Mystery",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img10.jpg",
+    "description": "A thrilling mystery involving secret societies and puzzles."
+  },
+  {
+    "id": 11,
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Classic",
+    "status": "Issued",
+    "rating": 4.5,
+    "image": "images/img11.jpg",
+    "description": "A story about racial injustice and moral growth."
+  },
+  {
+    "id": 12,
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "status": "Available",
+    "rating": 4.5,
+    "image": "images/img12.jpg",
+    "description": "A novel about love, wealth, and the American Dream."
+  }
+]

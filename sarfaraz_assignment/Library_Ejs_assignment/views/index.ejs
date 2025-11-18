@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <title>Library</title>
+</head>
+
+<body>
+
+<%- include('partials/header') %>
+
+<h2 class="page-title">All Books</h2>
+
+<div class="book-grid">
+
+  <% books.forEach(book => { %>
+    <div class="book-card">
+      <img src="<%= book.image %>">
+
+      <div class="card-info">
+        <h3><%= book.name %></h3>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>Genre:</strong> <%= book.genre %></p>
+
+        <p class="status <%= book.status === 'Available' ? 'available' : 'issued' %>">
+          <%= book.status %>
+        </p>
+
+        <a href="/book/<%= book.id %>" class="btn">View More</a>
+      </div>
+    </div>
+  <% }) %>
+
+</div>
+
+<%- include('partials/footer') %>
+</body>
+</html>
