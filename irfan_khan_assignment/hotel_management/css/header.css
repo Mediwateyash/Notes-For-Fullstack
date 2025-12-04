@@ -1,0 +1,30 @@
+/* ========== NAVBAR ========== */
+.navbar {
+  background: linear-gradient(135deg, #0b132b, #1c2541);
+  padding: 1rem 0;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #fcd34d;
+}
+
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #fcd34d;
+}
+

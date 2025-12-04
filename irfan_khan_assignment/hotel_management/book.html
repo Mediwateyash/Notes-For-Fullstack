@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Now - LuxuryStay</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/hotel_management/css/booknow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">LuxuryStay</h1>  
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="hotels.html">View Hotels</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <div class="booking-container">
+      <h2>Book Your Stay</h2>
+      <p class="booking-intro">Fill in your details below to confirm your luxury experience with us.</p>
+
+      <form class="book-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="checkin">Check-in Date</label>
+          <input id="checkin" type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="checkout">Check-out Date</label>
+          <input id="checkout" type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input id="guests" type="number" min="1" max="10" value="1" required />
+        </div>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>Cities</h4>
+        <ul>
+          <li><a href="mumbai.html">Mumbai</a></li>
+          <li><a href="goa.html">Goa</a></li>
+          <li><a href="delhi.html">Delhi</a></li>
+          <li><a href="jaipur.html">Jaipur</a></li>
+        </ul>
+      </div>
+      <div class="social-links">
+        <a href="www.google.com"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+
+      </div>
+    </div>
+    <p class="footer-text">&copy; 2025 LuxuryStay. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
