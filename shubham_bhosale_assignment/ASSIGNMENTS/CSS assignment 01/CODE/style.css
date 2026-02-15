@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:lightgoldenrodyellow;
+}
+
+.main-header{
+    display: flex;
+}
+
+
+
+.bio{
+    color: grey;
+    text-transform: capitalize;
+    word-spacing: 1em;
+    display: none;
+}
+
+.site-title{
+    color: blue;
+    text-align: center;
+    
+}
+
+#footer{
+    background-color: black;
+    color: white;
+}
+
+.btn{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    height: 20px;
+    width: 50;
+
+}
+
+.name{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.a-tag{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.a-tag:hover{
+    color: #312E81;
+}
+
+
+
+.profile-card{
+    width: 300px;
+    margin: auto;
+    background: linear-gradient(140deg, #4e5c7c 0%, #1E1B4B 50%, #312E81 100%);
+   
+    border: 2px solid #ddd ;
+
+}
+
+.btn:hover{
+    background-color: darkgreen;
+     width: 70px;
+}
+.profile-img{
+    width: 100% ;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+
+}
+
+.project-list{
+    display: flex;
+    gap: 15px; 
+    justify-content: space-around;
+}
+
+.a :hover{
+    color: crimson;
+    text-decoration-line: underline;
+    
+}
+
