@@ -103,9 +103,13 @@ background-size: cover;
 }
 
 footer{
-    background-color: grey;
+    background-color:rgb(31, 31, 31);
     padding-top: 50px;
     height: 100px;
     text-align: center;
 
+}
+
+p{
+    color: white;
 }
