@@ -45,8 +45,22 @@ a{
 }
 
 .menu-tag:hover{
-    color: blue;
+    color: red;
     
 }
 
+
+.hero-section{  
+ background-repeat: no-repeat;
+background-size: cover;
+ background-position: center;
+ opacity: 0.85;
+ text-align: center;
+}
+
+.hero-message{
+    color: aliceblue;
+    background-color: black ;
+
+}
 
