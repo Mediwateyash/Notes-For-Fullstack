@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.navigation{
+    background-color: antiquewhite;
+    height: 55px;
+
+}
+
+.logo-holder{
+    text-align:start;
+    text-transform: uppercase;
+    text-shadow: 1px;
+    display: flex;
+
+}
+
+.logo{
+    height: 50px;
+    width: 60px;
+
+}
+
+
+.logo-name{
+    width: 800px;
+}
+.menu{
+    display: flex;
+    gap: 12px;
+    font-size: 20px;
+    list-style-type:none ;
+    background-color: rgb(100, 75, 75);   
+}
+
+a{
+    color: white;
+    font-style: normal;
+    text-align: center;
+    display:contents;
+    text-decoration: none;
+
+}
+
+.menu-tag:hover{
+    color: blue;
+    
+}
+
+
