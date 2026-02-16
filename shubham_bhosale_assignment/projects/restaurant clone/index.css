@@ -74,9 +74,9 @@ background-size: cover;
 
 }
 
-
-
-
+.Feature{
+    padding-bottom: 35px;
+}
 .items{
     display: block;
     background-color: rgb(170, 177, 184);
@@ -92,4 +92,20 @@ background-size: cover;
     background-position: center;
     justify-content: space-evenly;
     
+}
+
+.btn{
+    text-align: center;
+    color: black;
+    align-content: center;
+    padding-bottom: 5px;
+    
+}
+
+footer{
+    background-color: grey;
+    padding-top: 50px;
+    height: 100px;
+    text-align: center;
+
 }
