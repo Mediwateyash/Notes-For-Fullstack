@@ -47,13 +47,16 @@
     width: 200px;
 }
 
-.bt{
-    height: 20px;
 
+.cart-container {
+    text-align: center;
 }
 
-.btn2{
-    padding-left: 50%;
-    align-self: center;
-    padding-bottom: 20px;
+.cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
