@@ -1,0 +1,59 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.section-title{
+    background-color:#f5c68f;
+    color: #2e2c2c;
+    text-align: center;
+    height: 40px;
+    text-decoration: underline;
+    text-size-adjust: 30px;
+    padding: 12px;
+    
+    
+}
+
+
+.menu-grid{
+    background-color: white;
+    padding: 12px;
+    padding-bottom: 12px ;
+    justify-items: center;
+}
+
+
+.menu-card1{
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    margin-top: 6px;
+    background-color: rgb(228, 215, 193);
+    width: 1000px;
+    text-transform: uppercase;
+}
+
+.food-img{
+    padding: 20px;
+    height: 200px;
+}
+
+
+
+.food-img1{
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+.bt{
+    height: 20px;
+
+}
+
+.btn2{
+    padding-left: 50%;
+    align-self: center;
+    padding-bottom: 20px;
+}
